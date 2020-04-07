@@ -1,0 +1,267 @@
+/* --- Base --- */
+.logo {
+  font-family: 'Papyrus';
+  color: #F2C506;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 2.5rem;
+}
+body {
+  font-family: 'Montserrat';
+  background-color: rgba(221,221,221,1);
+}
+
+p,
+li {
+  color: #555;
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 3.25rem;
+}
+
+nav {
+  background-color: #fff;
+ }
+
+li {
+  list-style: none;
+}
+
+footer {
+  background-color: #000;
+  color: #999;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Layout --- */
+.service-list li::before,
+.team p::before {
+  content: url('img/paintbrush.svg');
+  padding: 5px;
+  position: absolute;
+  left: -35px;
+}
+
+.service-list li,
+.team p {
+  position: relative;
+}
+
+.service-list {
+  padding-top: 2em;
+  line-height: 2.5em;
+}
+
+.team-para p {
+  text-align: justify;
+}
+
+.contact,
+.contact p {
+  text-align: center;
+}
+
+.contact p {
+  color: #888;
+}
+
+#navbar {
+  transition: top 0.8s;
+}
+
+.background-tint-1 {
+  text-shadow: 0px 0px 50px #000;
+}
+
+.background-tint-2 {
+  text-shadow: 0px 0px 15px #000;
+}
+
+.carousel-item p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.carousel-item h3 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: #222;
+}
+
+.carousel-item {
+  height:100vh;
+ }
+
+ .carousel-caption {
+   padding-bottom: 15vh;
+   top: 30%;
+ }
+
+ .carousel-caption img {
+   max-width: 600px;
+ }
+
+.mail-icon {
+  transform: scale(2);
+}
+
+.active {
+  border-bottom: 2px solid var(--dark);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+#mailAddr {
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+/* --- Images --- */
+main img{
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+.service-img img{
+  height: 40vh;
+}
+
+.house {
+  background: url('img/kitchen-white.jpg');  /*  , url('img/kitchen.jpg'); */
+  /* background-blend-mode: multiply; */
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  margin: 0 15px;
+}
+
+.tinted-image-1 {
+  background-image:
+  linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url('img/AdobeStock_paint.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tinted-image-2{
+  background-image:
+  linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url('img/AdobeStock-paint-cans.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tinted-image-3 {
+  background-image:
+  linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+        url('img/paint-brushes.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+/* --- Media Queries --- */
+@media (min-width: 576px) {
+  .team-para p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+ }
+
+@media (min-width: 992px) {
+  main img {
+    max-height: 70vh;
+  }
+ }
+
+@media (max-width: 575.9px){
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+
+ .navbar img {
+   width: 50px;
+ }
+
+ main img {
+   max-height: 40vh;
+ }
+
+ .house,
+ .service-img img {
+   height: 30vh;
+ }
+
+ .carousel-caption {
+   left: 5%;
+   right: 5%;
+   top: 25%;
+   padding-bottom: 5vh;
+ }
+
+ .active {
+   border-bottom: none;
+ }
+}
+
+@media (max-width: 767.9px){
+  .carousel-item h1 {
+  font-size: 1.5em;
+  }
+
+  .carousel-item h3 {
+   font-size: 1.2em;
+  }
+
+  .carousel-item p {
+   font-size: 1em;
+  }
+
+  .carousel-item img {
+   width: 80%;
+   padding: 0;
+   position: relative;
+   top: 40%;
+  }
+
+  p,
+  li,
+  footer span {
+    font-size: 1em;
+  }
+
+  .service-list {
+   line-height: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  #mailAddr {
+    font-size: 1rem;
+  }
+} /* --- end media queries--- */

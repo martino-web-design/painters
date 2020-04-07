@@ -1,0 +1,361 @@
+/* --- Base --- */
+.logo {
+  font-family: 'Papyrus';
+  color: #F2C506;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 2.5rem;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8em;
+  font-family: 'Montserrat';
+}
+
+p,
+li {
+  color: #555;
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 3.25rem;
+}
+
+li {
+  list-style: none;
+}
+
+/*
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 1rem;
+display: flex;
+background-color: #fff;
+}
+*/
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 16px;
+}
+
+footer {
+  background-color: #000;
+  color: #999;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#navbar {
+  transition: top 0.8s;
+}
+/* --- Layout --- */
+.service-list li::before,
+.team p::before {
+  content: url('../img/paintbrush-2.svg');
+  position: absolute;
+  top: -10px;
+  left: -35px;
+
+}
+
+.service-list li,
+.team p {
+  margin-left: 5%;
+  line-height: 1.25em;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.service-list li,
+.team p {
+  position: relative;
+}
+
+.service-list {
+  padding-top: 2em;
+  line-height: 2.5em;
+}
+
+.team-para p {
+  text-align: justify;
+}
+
+.contact,
+.contact p {
+  text-align: center;
+}
+
+.contact p {
+  color: #888;
+}
+
+.mail-icon {
+  transform: scale(2);
+}
+
+.active {
+  border-bottom: 2px solid var(--dark);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+#mailAddr {
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.main-logo {
+  width: 50vw;
+  max-width: 500px;
+}
+
+.main-logo-sm {
+  width: 40vw;
+  max-width: 300px;
+}
+
+/* --- Images --- */
+main img{
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+.service-img img{
+  height: 40vh;
+}
+
+.house {
+  background: url('../img/kitchen-white.jpg');  /*  , url('img/kitchen.jpg'); */
+  /* background-blend-mode: multiply; */
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  margin: 0 15px;
+}
+
+/* Parallax images */
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* opacity: 0.7; */
+}
+
+.pimg1 {
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url('../img/AdobeStock_paint.jpeg');
+  height: 100vh;
+  z-index: 500;
+}
+
+.pimg2 {
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url('../img/AdobeStock-paint-cans.jpeg');
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url('../img/AdobeStock_workers.jpeg');
+  background-position: 20%;
+  min-height: 400px;
+}
+
+.pimg4 {
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url('../img/AdobeStock_paint.jpeg');
+  min-height: 300px;
+  z-index: 500;
+}
+
+.section {
+  /* text-align: center;  */
+  padding: 50px 30px;
+}
+
+.section-light {
+  /* background-color: #f4f4f4; */
+  background-color: #DDD;
+  color: #666;
+}
+
+.section-dark {
+  /* background-color: #282e34; */
+  background-color: #DDD;
+  color: #666;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-child {
+  margin: 0 5px;
+  padding: 10px;
+  /* border: 1px solid #666; */
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  /* letter-spacing: 8px; */
+  /* text-transform: uppercase; */
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+.head-logo-text {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 27px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper span {
+  flex: 0 25%;
+}
+
+/* --- Media Queries --- */
+@media(max-width: 768px){
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-child {
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .team-para p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+ }
+
+@media (min-width: 992px) {
+  main img {
+    max-height: 70vh;
+  }
+
+  .service-list li {
+    padding-bottom: 35px;
+  }
+ }
+
+ @media (max-width: 767.9px){
+
+   p,
+   li,
+   footer span {
+     font-size: 1em;
+   }
+
+   h2 {
+     font-size: 1.25rem;
+   }
+
+   h3 {
+     font-size: 1.15rem;
+   }
+
+   #mailAddr {
+     font-size: 1rem;
+   }
+
+@media (max-width: 575.9px){
+  p,
+  li,
+  footer span {
+    font-size: 0.9em;
+  }
+
+  .pimg1,
+  .pimg2,
+  .pimg3 {
+    background-attachment: scroll;
+  }
+
+  .ptext {
+    font-size: 20px;
+  }
+
+  .ptext .border {
+    padding: 10px;
+  }
+
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+
+ .navbar img {
+   width: 50px;
+ }
+
+ main img {
+   max-height: 40vh;
+ }
+
+ .house,
+ .service-img img {
+   height: 30vh;
+ }
+
+ .active {
+   border-bottom: none;
+ }
+}
+
+
+} /* --- end media queries--- */
