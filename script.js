@@ -1,8 +1,11 @@
 
 // --- Window Scroll function to show nav ---
-/* -- Parallax Effect ---
+// -- Parallax Effect ---
 const winHeight = window.innerHeight;
-const nav = document.querySelector('#navbar');
+const scrolled = window.scrollY;
+const box_1 = document.querySelector('#box_1');
+
+// const nav = document.querySelector('#navbar');
 
 document.addEventListener('scroll', addScrollListener);
 
@@ -11,18 +14,9 @@ function removeScrollListener(){
 }
 
 function addScrollListener(){
-  const scrolled = window.scrollY;
-  console.log(scrolled,"s");
-  console.log(winHeight,"w");
-
-
-  if(scrolled > winHeight){
-
-    nav.style.zIndex = "1000";
-    return removeScrollListener();
-  }
+  hero_logo.style.top = -(window.pageYOffset / 2)+'px';
 }
-*/
+
 
 $(document).ready(function(){
 
@@ -39,7 +33,7 @@ $(document).ready(function(){
     const nav = document.querySelector('nav');
     const img = document.querySelector('.navCara');
     const main = document.querySelector('main');
-    
+
 // --- window scrolling Add Active Nav Class ---
   var scrollbarLocation = $(this).scrollTop();
 
